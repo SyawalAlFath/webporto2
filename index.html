@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portofolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">Syawal AlFath</a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+
+    <label for="nav-toggle" class="hamburger" aria-label="Buka menu navigasi">
+      <img src="images/menu.png">
+    </label>
+
+    <nav class="menu">
+      <a href="#home">Beranda</a>
+      <a href="#experience">Pengalaman</a>
+      <a href="#education">Pendidikan</a>
+      <a href="#language">Bahasa</a>
+      <a href="portofolio.html">Portofolio</a>
+    </nav>
+
+    <a class="btn small nav-cta" href="#contact">Kontak Saya</a>
+  </div>
+</header>
+
+
+  <main id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <p class="badge"></p>
+        <h1>Halo, Saya <span class="accent">Syawaliansyah</span>.</h1>
+        <p class="subtitle">
+          Saya mahasiswa Teknologi Rekayasa Multimedia di Politeknik
+          Negeri Media Kreatif dengan minat pada desain
+          visual, terbiasa mengerjakan proyek akademik yang melibatkan perancangan
+          visual serta pengembangan aplikasi
+          sederhana, dan terus mengembangkan keterampilan yang saya punya melalui
+          pembelajaran mandiri, atau mengikuti
+          lomba-lomba yang ada.
+        </p>
+        <a class="btn small" href="cv.html">CV Saya</a>
+        <a class="btn small" href="portofolio.html">Portofolio</a>
+      </div>
+
+      <div class="hero-right">
+        <div class="profile-card">
+          <div class="avatar">
+            <!-- dari: {{ asset('images/solo2.png') }} -->
+            <img src="images/solo2.png" alt="Foto Syawaliansyah">
+          </div>
+          <div class="profile-info">
+            <h3>Syawaliansyah Pratama A</h3>
+            <p>Designer / Editor / 3D Asset</p>
+          </div>
+          <div class="profile-tags">
+            <span class="tag">Kreatif</span>
+            <span class="tag">Konsisten</span>
+            <span class="tag">Cepat Belajar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Software Skills</h2>
+      </div>
+
+      <div class="grid skills-grid">
+        <article class="skill-card">
+          <div class="skill-icon" title="Adobe Photoshop">
+            <img src="images/skills/AdobePhotoshop.png" alt="Adobe Photoshop">
+          </div>
+          <div>
+            <h3>Adobe Photoshop</h3>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-icon" title="Adobe Illustrator">
+            <img src="images/skills/AdobeIllustrator.png" alt="Adobe Illustrator">
+          </div>
+          <div>
+            <h3>Adobe Illustrator</h3>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-icon" title="CapCut">
+            <img src="images/skills/Capcut.png" alt="Capcut">
+          </div>
+          <div>
+            <h3>CapCut</h3>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-icon" title="Blender">
+            <img src="images/skills/Blender.png" alt="Blender 3d">
+          </div>
+          <div>
+            <h3>Blender</h3>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-icon" title="Figma">
+            <img src="images/skills/figma.png" alt="figma">
+          </div>
+          <div>
+            <h3>Figma</h3>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-icon" title="Canva">
+            <img src="images/skills/Canva.png" alt="Canva">
+          </div>
+          <div>
+            <h3>Canva</h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Pengalaman</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="dot"></div>
+          <div class="content">
+            <div class="row">
+              <h3>UPTD Pasar Cisalak</h3>
+              <span class="pill">Jan 2022 - Mei 2022</span>
+            </div>
+            <p class="muted">Menjadi Staff Assistant Sekretariat</p>
+            <ul class="bullets">
+              <li>Mengelola dan merekap karcis parkir yang telah digunakan setiap bulanna.</li>
+              <li>Laporan keuangan terkait pemasukan dan pengeluaran operasional.</li>
+              <li>Data penyewa kios, termasuk mencatat penyewa yang aktif dan sudah berhenti.</li>
+              <li>Pendataan harga pangan dengan bertanya melalui pedagang di pasar.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="dot"></div>
+          <div class="content">
+            <div class="row">
+              <h3>Freelance Project Assistance</h3>
+              <span class="pill">Jan 2024 - Sekarang</span>
+            </div>
+            <p class="muted">Menjadi asisten seseorang untuk melakukan projek yang diberikan</p>
+            <ul class="bullets">
+              <li>Mengerjakan berbagai tugas desain visual berbasis projek.</li>
+              <li>Menyelesaikan projek klien dengan tepat waktu.</li>
+              <li>Berkomunikasi dengan klien untuk memiliki hasil yang sesuai.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Pendidikan</h2>
+        <p>Riwayat pendidikan.</p>
+      </div>
+
+      <div class="card">
+        <div class="row">
+          <div>
+            <h3>Politeknik Negeri Media Kreatif</h3>
+            <h3 class="muted">Jurusan Teknologi Rekayasa Multimedia</h3>
+          </div>
+          <span class="pill">2023 - sekarang</span>
+        </div>
+      </div>
+
+      <div class="card2">
+        <div class="row">
+          <div>
+            <h3 class="muted">SMKN 3 Depok</h3>
+            <h3>Jurusan Teknik Komputer dan Jaringan</h3>
+          </div>
+          <span class="pill">2020 - 2023</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGE -->
+  <section id="language" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Bahasa</h2>
+      </div>
+
+      <div class="grid lang-grid">
+        <div class="lang-card">
+          <h3>Bahasa Indonesia</h3>
+          <div class="bar"><span style="width: 95%"></span></div>
+          <p class="muted">Lancar</p>
+        </div>
+        <div class="lang-card">
+          <h3>Bahasa Inggris</h3>
+          <div class="bar"><span style="width: 40%"></span></div>
+          <p class="muted">Pasif</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>Kontak Saya :</h3>
+      </div>
+
+      <div class="footer-actions">
+        <a class="btn" href="mailto:syawaliansyah501@gmail.com">Email</a>
+        <a class="btn instagram" href="https://www.instagram.com/syawal_alfaths/" target="_blank" rel="noopener">
+          Instagram
+        </a>
+        <a class="btn ghost" href="#home">Kembali</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

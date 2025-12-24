@@ -1,0 +1,252 @@
+:root{
+  --bg:#0b0f1a;
+  --panel:#10182a;
+  --panel2:#0f1726;
+  --text:#eaf0ff;
+  --muted:#a9b4d0;
+  --stroke:rgba(255,255,255,.12);
+  --accent:#6ea8ff;
+  --accent2:#7cf5c6;
+  --shadow: 0 18px 45px rgba(0,0,0,.35);
+  --radius:18px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
+  background:
+    radial-gradient(1000px 600px at 20% 10%, rgba(110,168,255,.22), transparent 55%),
+    radial-gradient(900px 500px at 80% 0%, rgba(124,245,198,.12), transparent 55%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{color:inherit; text-decoration:none}
+.container{width:min(1100px, 92%); margin:0 auto}
+
+/* NAV */
+.nav{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(10px);
+  background: rgba(11,15,26,.62);
+  border-bottom: 1px solid var(--stroke);
+}
+.nav-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 0;
+}
+.brand{font-weight:800; letter-spacing:.3px}
+.menu{display:flex; gap:18px}
+.menu a{
+  color:var(--muted);
+  padding:8px 10px;
+  border-radius:12px;
+}
+.menu a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:10px;
+  padding:12px 16px;
+  border-radius:14px;
+  background: linear-gradient(135deg, rgba(110,168,255,.95), rgba(124,245,198,.9));
+  color:#06101a;
+  font-weight:800;
+  box-shadow: var(--shadow);
+}
+.btn.small{padding:10px 14px; border-radius:12px; font-weight:800}
+.btn.ghost{
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--stroke);
+  box-shadow:none;
+}
+.btn.ghost:hover{background:rgba(255,255,255,.06)}
+
+
+/* =========================
+   ✅ PINDAHAN DARI style.css
+   NAV TOGGLE + HAMBURGER (menu.png)
+   ========================= */
+.nav-toggle{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+
+.hamburger{
+  display:none; /* tampil di HP lewat media query */
+  width:auto;
+  height:auto;
+  border:none;
+  background:transparent;
+  padding:8px;
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+}
+
+.hamburger img{
+  width:26px;
+  height:26px;
+  display:block;
+  object-fit:contain;
+  filter: invert(1); /* hapus kalau icon sudah putih */
+}
+
+
+/* SECTION (dipakai portofolio) */
+.section{padding:58px 0}
+.section-head{
+  display:flex; align-items:flex-end; justify-content:space-between;
+  gap:18px; flex-wrap:wrap;
+  margin-bottom:18px;
+}
+.section-head h2{margin:0; font-size:28px}
+.section-head p{margin:0; color:var(--muted); max-width:60ch}
+.muted{color:var(--muted)}
+
+/* PORTFOLIO */
+.portfolio-list{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.portfolio-card{
+  display:grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap:16px;
+  padding:18px;
+  border-radius: var(--radius);
+  border:1px solid var(--stroke);
+  background: rgba(255,255,255,.04);
+  box-shadow: var(--shadow);
+}
+
+.portfolio-left h3{margin:0 0 10px}
+
+.portfolio-meta{
+  display:grid;
+  gap:6px;
+  margin-bottom:10px;
+}
+
+.meta-label{
+  color: var(--text);
+  font-weight:800;
+  margin-right:8px;
+}
+
+.portfolio-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+.portfolio-right{
+  padding: 10px;
+  border-radius: 16px;
+  border:1px solid var(--stroke);
+  overflow:hidden;
+  background: rgba(255,255,255,.03);
+}
+.portfolio-right img{
+  width:100%;
+  height:100%;
+  min-height:260px;
+  object-fit:cover;
+  display:block;
+  border-radius: 12px;
+}
+
+.portfolio-gallery{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+}
+
+.portfolio-gallerys{
+  display:flexbox;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+}
+
+/* 3 foto rapih */
+.portfolio-gallery-3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+}
+
+.portfolio-gallery-3 img{
+  width:100%;
+  aspect-ratio: 4 / 3;   /* bikin semua kotak seragam */
+  object-fit:cover;
+  border-radius:12px;
+  display:block;
+}
+
+/* tablet: 2 kolom */
+@media (max-width: 920px){
+  .portfolio-gallery-3{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* hp: 1 kolom */
+@media (max-width: 560px){
+  .portfolio-gallery-3{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 920px){
+  .portfolio-card{grid-template-columns: 1fr}
+  .portfolio-right img{min-height:220px}
+}
+
+@media (max-width: 560px){
+  .nav-cta{display:none;} /* opsional: sembunyikan tombol Kontak di HP */
+}
+
+/* =========================
+   ✅ REVISI: navbar responsive
+   (mengganti .menu{display:none})
+   ========================= */
+@media (max-width: 560px){
+  .nav-inner{position:relative;}
+
+  .hamburger{display:inline-flex;}
+
+  .menu{
+    display:none;                 /* default tertutup */
+    position:absolute;
+    top:62px;
+    left:0;
+    right:0;
+    padding:12px;
+    border-radius:16px;
+    border:1px solid var(--stroke);
+    background: rgba(11,15,26,.92);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    flex-direction:column;
+    gap:8px;
+  }
+
+  #nav-toggle:checked ~ .menu{
+    display:flex;
+  }
+
+  .menu a{
+    padding:12px 12px;
+    border-radius:12px;
+    background: rgba(255,255,255,.03);
+  }
+}
